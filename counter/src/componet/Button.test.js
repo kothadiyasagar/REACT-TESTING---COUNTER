@@ -30,7 +30,8 @@ describe("Button Testing", function () {
         const mockfn = jest.fn()
         render(<Button onClick={mockfn}>Change</Button>)
         const btn = screen.getByText("Change")
-        fireEvent.click(btn);
+        fireEvent.click(btn)
+    
         expect(mockfn).toBeCalledTimes(1)
       })
 
